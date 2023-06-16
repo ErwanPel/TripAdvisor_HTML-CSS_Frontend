@@ -621,7 +621,6 @@ aside img:last-child {
   gap: 10px;
   text-decoration: none;
   color: inherit;
-  text-align: justify;
 }
 
 .bloc-testimony img {
@@ -928,6 +927,10 @@ footer a:hover {
   /*----------testimony MW 768 px--------------*/
   /*--------------------------------*/
 
+  .bloc-testimony {
+    gap: 10px;
+  }
+
   .social {
     flex-wrap: nowrap;
     overflow: hidden;
@@ -936,7 +939,7 @@ footer a:hover {
 
   .social > div {
     flex-shrink: 0;
-    width: 530px;
+    width: 370px;
   }
 
   /*----------window MW 768 px--------------*/
