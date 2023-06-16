@@ -838,7 +838,7 @@ footer a:hover {
   /*--------------------------------*/
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   main .nav-bloc {
@@ -929,6 +929,20 @@ footer a:hover {
 
   .bloc-testimony {
     gap: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .bloc-testimony > div {
+    flex-shrink: 0;
+    width: calc(100% / 1.1);
+  }
+
+  .bloc-forum :first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
   }
 
   .social {
@@ -939,7 +953,7 @@ footer a:hover {
 
   .social > div {
     flex-shrink: 0;
-    width: 370px;
+    width: 250px;
   }
 
   /*----------window MW 768 px--------------*/
@@ -1000,7 +1014,7 @@ footer a:hover {
 
   .window-FAQ > :last-child > div {
     display: flex;
-    width: 500px;
+    width: 345px;
     flex-direction: column;
     position: absolute;
     left: 10px;
