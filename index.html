@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripAdvisor</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <link rel="stylesheet" href="./assets/css/icons.css" />
+    <script src="./assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <i class="icon-menu_bars mobile-item"></i>
+        <img
+          class="logo no-width-100"
+          src="./assets/img/logo.png"
+          alt="logo de tripadvisor"
+        />
+        <nav>
+          <a href="#" class="no-mobile-item">
+            <i class="icon-pencil"></i>
+            <span>Avis</span> </a
+          ><a href="#" class="no-mobile-item">
+            <i class="icon-heart"></i>
+            <span>Voyages</span> </a
+          ><a href="#" class="no-mobile-item">
+            <i class="icon-notification_bell"></i>
+            <span>Alertes</span> </a
+          ><button class="no-mobile-item" id="sign-up">Connectez-vous</button>
+          <a href="#">
+            <i class="icon-search mobile-item"></i>&nbsp;
+            <i class="icon-empty_cart"></i>
+            <span>Panier</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="menu" class="container">
+        <h1><span>Explorez</span> Mantes-la-Ville</h1>
+        <p class="color-grey small-size-12">
+          Les revenus influencent le choix des expériences présentées sur cette
+          page :
+          <a href="#" class="link-normal"
+            ><span class="underline-dynamic"> en savoir plus.</span></a
+          >
+        </p>
+
+        <nav class="nav-bloc container">
+          <a href="#" class="link-normal"
+            ><div><span>Hôtels</span><i class="icon-hotels"></i></div
+          ></a>
+
+          <a href="#" class="link-normal"
+            ><div><span>Activités</span><i class="icon-attractions"></i></div
+          ></a>
+          <a href="#" class="link-normal"
+            ><div>
+              <span>Locations de vacances</span>
+              <i class="icon-vacation_rentals"></i></div
+          ></a>
+          <a href="#" class="link-normal"
+            ><div><span>Restaurants</span><i class="icon-restaurants"></i></div
+          ></a>
+          <a href="#" class="link-normal"
+            ><div><span>forums de voyages</span><i class="icon-forums"></i></div
+          ></a>
+          <a href="#" class="link-normal unvisible-nav-bloc"
+            ><div><span>Vols</span><i class="icon-flights"></i></div
+          ></a>
+          <a href="#" class="link-normal unvisible-nav-bloc"
+            ><div><span>Croisières</span><i class="icon-cruises"></i></div
+          ></a>
+          <a href="#" class="link-normal"
+            ><div>
+              <span>Plus</span>
+              <i class="icon-more_horizontal"></i></div
+          ></a>
+        </nav>
+      </div>
+
+      <div class="picture container">
+        <div>
+          <img
+            src="./assets/img/collegiale.png"
+            alt="vue de la collegiale Notre-Dame"
+          />
+          <img
+            class="mobile-item"
+            src="https://static.tacdn.com/img2/fallback_ads/tc_2023_fallback_ad_ollie.svg"
+            alt="logo jaune de Tripadvisor"
+          />
+
+          <img
+            class="no-mobile-item"
+            class="no-width-100"
+            src="./assets/img/bestchoice.png"
+            alt="Logo jaune best choice 2023"
+          />
+          <button class="small-size-12">
+            <i class="icon-photo"></i>&nbsp;<span>Toutes les photos</span>
+          </button>
+        </div>
+
+        <div class="no-mobile-item">
+          <div class="no-mobile-item">
+            <img
+              class="no-mobile-item"
+              src="./assets/img/pont-la-seine.png"
+              alt="vue sur la seine avec un ancien pont brisé et un espace boisé sur l'autre rive"
+            />
+          </div>
+          <div>
+            <img
+              class="no-mobile-item"
+              src="./assets/img/piscine.png"
+              alt="bassin de la piscine"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="breadcrumb-bloc container color-grey small-size-12 no-mobile-item"
+      >
+        <nav>
+          <span>Europe</span> <i class="icon-single_chevron_right"></i>
+          <span>France</span> <i class="icon-single_chevron_right"></i>
+          <span>Île-de-France</span>
+          <i class="icon-single_chevron_right"></i>
+          <span>Mantes-la-Ville</span><i class="icon-caret_down"></i>
+        </nav>
+        <span>visiter : Mantes-la-Ville</span>
+      </div>
+
+      <section id="description" class="container">
+        <div>
+          <h2>Une ville culturel de bord de Seine</h2>
+          <p class="georgia-font">
+            Située à une cinquantaine de kilomètres de Paris, la commune de
+            Mantes-la-Ville prend place dans les Yvelines, au confluent de la
+            Seine et de la Vaucouleurs.A l'origine village rural nommé Medenta
+            Villa, la ville de Mantes-la-Ville est officiellement fondée au Xe
+            siècle. Elle était autrefois connue pour ses activités agricoles,
+            meunières et viticoles qui alimentaient la région parisienne, mais
+            également la Normandie. A la fin de sa culture de vignes, au XIXe
+            siècle, elle se tourne complètement vers le maraîchage et l'élevage.
+            Grâce à l'arrivée du chemin de fer, à la même époque, la commune se
+            développe grandement, devenant ainsi un haut site industriel,
+            notamment dans la chimie. Aujourd'hui, Mantes-la-Ville profite de
+            son cadre naturel et de son économie, tout en préservant un
+            patrimoine architectural plein de charme.
+          </p>
+        </div>
+        <aside>
+          <div>
+            <h3>Mantes : commencez à organiser !</h3>
+            <p>
+              Créez un voyage pour enregistrer et organiser toutes vos idées et
+              les visualiser sur une carte
+            </p>
+            <button>Créez un voyage</button>
+          </div>
+          <img
+            src="./assets/img/map.png"
+            alt="carte satellite avec présence de points d'intérêts"
+          />
+        </aside>
+      </section>
+
+      <section id="unmissable" class="container">
+        <h2>Mantes-la-Ville: les immanquables</h2>
+        <div class="principal-line">
+          <div class="unmissable-text">
+            <h3>Se divertir</h3>
+            <p class="georgia-font">
+              Des lieux à voir, des rues à explorer et des experiences
+              emblématiques à Mantes-la-Ville.
+            </p>
+
+            <a href="#" class="link-normal"
+              ><p class="underline-dynamic color-grey bold link-normal">
+                tout afficher
+              </p></a
+            >
+          </div>
+
+          <div class="caroussel-line">
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/collegiale.png"
+                  alt="cathédrale Notre-Dame à Mantes la Jolie"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Collegiale Notre-Dame</h4>
+              <div class="rank small-size-12 color-grey">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                </ul>
+                <span>150 000</span>
+              </div>
+              <br />
+              <p>Patrimoine culturel et historique & Points d'intérêts</p>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/saint-maclou.png"
+                  alt="Tour Saint-Maclou à Mantes la Jolie"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Tour Saint-Maclou</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>100 000</span>
+              </div>
+              <br />
+              <p>Sites historiques, Tours et plateformes d'observation</p>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/lac-moissons.png"
+                  alt="Vue sur le lac de Moissons-Mousseaux"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Base de loisir de Moissons</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>90 000</span>
+              </div>
+              <br />
+              <p>Sport nautique</p>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/piscine.png"
+                  alt="vue sur un des bassins de la piscine"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Piscine Aqualude</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>175 000</span>
+              </div>
+              <br />
+              <p>Sport nautique, détente</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="principal-line">
+          <div class="unmissable-text">
+            <h3>Se reposer</h3>
+            <p class="georgia-font">
+              Un mélange de charme, de tradition tout en étant moderne.
+            </p>
+
+            <a href="#"
+              ><p class="underline-dynamic color-grey bold">tout afficher</p></a
+            >
+          </div>
+
+          <div class="caroussel-line">
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/ferme-vallee.png"
+                  alt="vue d'une ferme en pierre avec des arbres"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Ferme des vallées</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                </ul>
+                <span>85 000</span>
+              </div>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/l-asinerie.png"
+                  alt="vue sur une struture en pierre"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">L'Asinerie</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="half-rank"></li>
+                </ul>
+                <span>100 000</span>
+              </div>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/picardiere.png"
+                  alt="Vue sur une ferme et un jardin"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">La picardiere</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>90 000</span>
+              </div>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/la-ruche.png"
+                  alt="vue le batiment et une partie de la cours"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">La Ruche</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>85 000</span>
+              </div>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/domaine-de-la-corniche.png"
+                  alt="Vue sur la seine depuis le balcon du domaine de la Corniche"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Le domaine de la Corniche</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>82 500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="principal-line">
+          <div class="unmissable-text">
+            <h3>Se restaurer</h3>
+            <p class="georgia-font">
+              De la fraîcheur et le goût du terroir, lieux incontournables où
+              langer, boire et faire la fête.
+            </p>
+
+            <a href="#"
+              ><p class="underline-dynamic color-grey bold">tout afficher</p></a
+            >
+          </div>
+
+          <div class="caroussel-line">
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/moulin-reillere.png"
+                  alt="plat de viande et son jus"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Moulin de la Reillere</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                </ul>
+                <span>150 000</span>
+              </div>
+              <br />
+              <p>€€€€·Française</p>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/mamounia.png"
+                  alt="restaurant avec un style oriental"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Al Mamounia</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>95 624</span>
+              </div>
+              <br />
+              <p>€€-€€€·Marocaine et Méditerranéenne</p>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/little-warung.png"
+                  alt="vue dans le restaurant"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Little Warung</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>90 000</span>
+              </div>
+              <br />
+              <p>€-€€·Asiatique</p>
+            </div>
+
+            <div class="item-caroussel">
+              <div>
+                <img
+                  src="./assets/img/shayan-palace.png"
+                  alt="Vue sur la salle principal du restaurant avec sol rouge"
+                />
+                <div class="best">
+                  <img
+                    class="no-width-100"
+                    src="./assets/img/success.png"
+                    alt="logo hibou de Tripadvisor"
+                  />
+                </div>
+                <div class="hearth">
+                  <i class="icon-heart"></i>
+                </div>
+              </div>
+              <h4 class="underline-dynamic">Shayan Palace</h4>
+              <div class="rank small-size-12">
+                <ul>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="full-rank"></li>
+                  <li class="empty-rank"></li>
+                </ul>
+                <span>17 600</span>
+              </div>
+              <br />
+              <p>€€€·Indienne</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="window-experience container">
+        <div class="no-mobile-item">
+          <h3>Expériences Traveller's Choice Best of the Best</h3>
+          <p>la crème de la crème, une sélection d'avis authentiques.</p>
+          <button>Voir la liste</button>
+        </div>
+        <div>
+          <img src="./assets/img/caption.jpg" alt="plongueur sous l'eau" />
+          <img
+            class="no-width-100"
+            src="https://static.tacdn.com/img2/fallback_ads/tc_2023_fallback_ad_ollie.svg"
+            alt="logo jaune de tripadivsor"
+          />
+          <div class="mobile-item">
+            <h3>Expériences Traveller's Choice Best of the Best</h3>
+            <p>la crème de la crème, une sélection d'avis authentiques.</p>
+          </div>
+          <button class="mobile-item">Voir la liste</button>
+        </div>
+      </div>
+
+      <section id="testimony" class="container">
+        <h2>Témoignages associés</h2>
+        <div class="bloc-testimony">
+          <div>
+            <a href="#">
+              <img
+                class="not-opacity"
+                src="./assets/img/espace-vert.png"
+                alt="vue sur la scène avec un espace boisé sur l'autre rive"
+              />
+              <h4>Les 10 meilleurs balades</h4>
+
+              <p>18 Mai 2023 · Temps de lecture : 5 min</p>
+
+              <p>
+                Mantes est une ville entouré de nombreux biotopes : campagne,
+                l'eau avec la Seine, la forêt et des falaises de calcaire. Les
+                amoureux de ...
+              </p>
+
+              <p>Par Jean Lapoisse</p>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img
+                class="not-opacity"
+                src="./assets/img/hlm.png"
+                alt="vue sur un appartement blanc"
+              />
+              <h4>5 bons plans pour devenir propriétaire</h4>
+
+              <p>27 Février 2021 · Temps de lecture : 15 min</p>
+
+              <p>
+                Depuis quelques années, la situation démographique a évolué et
+                la ville va devenir une véritable entité dynamique. Il fait bon
+                vivre ...
+              </p>
+
+              <p>Par Patrick Filou</p>
+            </a>
+          </div>
+          <div>
+            <a href="#"
+              ><img
+                class="not-opacity"
+                src="./assets/img/porte-ancienn.png"
+                alt="vue d'une porte médiévale dans la ville"
+              />
+              <h4>Une randonnée culturelle hors du commun</h4>
+
+              <p>12 juillet 2023 · Temps de lecture : 10 min</p>
+
+              <p>
+                Impossible de se promener dans le mantois sans découvrir un
+                "easter-egg" historique ou bien une bâtisse qui a résisté à
+                l'épreuve du temps...
+              </p>
+
+              <p>Par Hervé Duchemin</p></a
+            >
+          </div>
+        </div>
+
+        <div class="bloc-forum">
+          <div>
+            <h3>Tendances sur les forums</h3>
+            <a href="#"
+              ><p class="underline-dynamic color-grey bold">tout afficher</p></a
+            >
+          </div>
+        </div>
+
+        <div class="social">
+          <div>
+            <h4 class="underline-dynamic-dynamic">
+              Trajet aeroport CDG-Mantes
+            </h4>
+            <div>
+              <img src="./assets/img/logo.png" alt="photo de profil" />
+              <p>
+                Par
+                <a href="#" class="link-normal"
+                  ><span class="underline-dynamic bold">NoleeMtl</span></a
+                >
+                · 3 réponses
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="underline-dynamic-dynamic">
+              Selon vous, meilleur option de passe à Mantes ?
+            </h4>
+            <div>
+              <img src="./assets/img/logo.png" alt="photo de profil" />
+              <p>
+                Par
+                <a href="#" class="link-normal"
+                  ><span class="underline-dynamic bold">QuebecMichel</span></a
+                >
+                · 2 réponses
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="underline-dynamic-dynamic">
+              Connaissez-vous des bars cachés à Mantes ?
+            </h4>
+            <div>
+              <img src="./assets/img/logo.png" alt="photo de profil" />
+              <p>
+                Par
+                <a href="#" class="link-normal"
+                  ><span class="underline-dynamic bold">Titouandu36</span></a
+                >
+                · 1 réponse
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="window-FAQ">
+        <div class="no-mobile-item">
+          <h3>Obtenez des réponses à toutes vos questions sur TripAdvisor</h3>
+          <p>Consultez le centre d'aide dès aujourd'hui</p>
+          <button>Lancez-vous</button>
+        </div>
+        <div>
+          <img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/29/6b/5e/caption.jpg?w=1000&h=-1&s=1"
+            alt="plongueur sous l'eau"
+          />
+          <img
+            class="no-width-100 white-logo"
+            src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_tertiary_on_dark.svg"
+            alt="logo blanc de tripadivsor"
+          />
+          <div class="mobile-item">
+            <h3>Obtenez des réponses à toutes vos questions sur TripAdvisor</h3>
+            <p>Consultez le centre d'aide dès aujourd'hui</p>
+          </div>
+          <button class="mobile-item">Lancez-vous</button>
+        </div>
+      </div>
+    </main>
+
+    <section class="mobile-item container">
+      <hr />
+      <p>Visiter : Mantes-la-Ville</p>
+      <ul>
+        <li>Île-de-France</li>
+        <li>France</li>
+        <li>Europe</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>Paris&nbsp;<i class="icon-single_chevron_down"></i></li>
+        <li>Hôtels&nbsp;<i class="icon-single_chevron_down"></i></li>
+        <li>Activités</li>
+        <li>Restaurants</li>
+        <li>Vols</li>
+        <li>Locations de vacances</li>
+        <li>Récits de voyage</li>
+        <li>Croisières</li>
+        <li>Voitures de Location</li>
+        <li>Plus&nbsp;<i class="icon-single_chevron_down"></i></li>
+      </ul>
+    </section>
+
+    <footer class="bold">
+      <img
+        class="logo no-width-100"
+        src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logoset_solid_green.svg"
+        alt="logo tripadvisor vert"
+      />&nbsp;
+      <p>
+        Made at
+        <a href="#" class="link-normal"
+          ><p class="underline-dynamic bold">Le Reacteur</p></a
+        >by
+        <a href="#" class="link-normal"
+          ><p class="underline-dynamic bold">Wanou le Fou</p></a
+        >
+        - 2023
+      </p>
+    </footer>
+
+    <div id="modal" class="hidden">
+      <div class="form-container">
+        <form>
+          <h3>Formulaire de contact</h3>
+          <label
+            ><input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="Prénom"
+          /></label>
+          <label
+            ><input type="text" name="lastname" id="lastname" placeholder="Nom"
+          /></label>
+          <label
+            ><input type="email" name="email" id="email" placeholder="Email"
+          /></label>
+          <label>
+            <textarea
+              name="message"
+              id="message"
+              cols="33"
+              rows="10"
+              placeholder="Ecrivez-votre message..."
+            ></textarea>
+          </label>
+          <button type="submit">Envoyer le formulaire</button>
+          <i class="icon-times" id="close"></i>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
