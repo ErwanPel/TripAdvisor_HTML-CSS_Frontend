@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         data
       );
       console.log(response);
+
+      document.querySelector("#modal").classList.add("hidden");
     });
   } catch (error) {
     console.log(error);
