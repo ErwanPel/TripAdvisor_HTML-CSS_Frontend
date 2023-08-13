@@ -358,6 +358,19 @@ main .nav-bloc {
   cursor: pointer;
 }
 
+/*----------SECTION VIDEO--------------*/
+/*--------------------------------*/
+
+#video {
+  display: flex;
+  justify-content: center;
+}
+
+#video iframe {
+  width: 560px;
+  height: 315px;
+}
+
 /*----------SECTION DESCRIPTION--------------*/
 /*--------------------------------*/
 
@@ -877,6 +890,14 @@ footer a:hover {
     top: 10px;
     height: 35px;
     width: 30px;
+  }
+
+  /*----------video MW 768 px--------------*/
+  /*--------------------------------*/
+
+  #video iframe {
+    width: 400px;
+    height: 200px;
   }
 
   /*----------description MW 768 px--------------*/
