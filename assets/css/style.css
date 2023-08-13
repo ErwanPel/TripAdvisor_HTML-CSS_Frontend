@@ -363,7 +363,17 @@ main .nav-bloc {
 
 #video {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+#video button {
+  font-size: 12px;
+}
+
+.hide-video {
+  display: none;
 }
 
 #video iframe {
@@ -897,7 +907,7 @@ footer a:hover {
 
   #video iframe {
     width: 400px;
-    height: 200px;
+    height: 315px;
   }
 
   /*----------description MW 768 px--------------*/

@@ -1,22 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-  try {
-    console.log("content loaded");
+  console.log("content loaded");
 
-    document.querySelector("#sign-up").addEventListener("click", () => {
-      console.log("connectez-vous");
+  document.querySelector("#sign-up").addEventListener("click", () => {
+    console.log("connectez-vous");
 
-      document.querySelector("#modal").classList.remove("hidden");
-    });
+    document.querySelector("#modal").classList.remove("hidden");
+  });
 
-    document.querySelector("#close").addEventListener("click", () => {
-      console.log("fermer");
+  document.querySelector("#button-video").addEventListener("click", () => {
+    console.log("click video");
 
-      document.querySelector("#modal").classList.add("hidden");
-    });
+    document.querySelector("iframe").classList.toggle("hide-video");
 
-    document.querySelector("form").addEventListener("submit", async (event) => {
-      event.preventDefault();
+    const button = document.querySelector("#button-video");
+    console.log(button.textContent);
 
+    if (button.textContent === "Montrer la video de présentation") {
+      button.textContent = "Cacher la vidéo de présentation";
+    } else {
+      button.textContent = "Montrer la video de présentation";
+    }
+  });
+
+  document.querySelector("#close").addEventListener("click", () => {
+    console.log("fermer");
+
+    document.querySelector("#modal").classList.add("hidden");
+  });
+
+  document.querySelector("form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    try {
       const data = {
         firstname: document.querySelector("#firstname").value,
         lastname: document.querySelector("#lastname").value,
@@ -33,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(response);
       // alert("votre message a bien été envoyé");
       document.querySelector("#modal").classList.add("hidden");
-    });
-  } catch (error) {
-    console.log(error);
-  }
+    } catch (error) {
+      console.log(error);
+    }
+  });
 });
