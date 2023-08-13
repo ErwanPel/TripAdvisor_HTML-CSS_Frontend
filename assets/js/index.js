@@ -7,6 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#modal").classList.remove("hidden");
   });
 
+  document.querySelector("#modal").addEventListener("click", (event) => {
+    document.querySelector("#modal").classList.add("hidden");
+  });
+
+  document.querySelector("#form-modal").addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  document.querySelector("#close").addEventListener("click", () => {
+    console.log("fermer");
+
+    document.querySelector("#modal").classList.add("hidden");
+  });
+
   document.querySelector("#button-video").addEventListener("click", () => {
     console.log("click video");
 
@@ -20,12 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       button.textContent = "Montrer la video de présentation";
     }
-  });
-
-  document.querySelector("#close").addEventListener("click", () => {
-    console.log("fermer");
-
-    document.querySelector("#modal").classList.add("hidden");
   });
 
   document.querySelector("form").addEventListener("submit", async (event) => {
