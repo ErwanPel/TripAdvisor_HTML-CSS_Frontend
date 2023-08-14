@@ -261,14 +261,24 @@ section:not(.mobile-item) {
 /*----------MENU--------------*/
 /*--------------------------------*/
 
-main .nav-bloc {
+h1 + p {
+  margin-bottom: 60px;
+}
+
+nav.nav-bloc {
+  position: sticky;
+  top: 0;
   padding: 10px 0;
-  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  top: 0;
   z-index: 1;
+  padding: 25px;
+  background-color: white;
+}
+
+#menu > :nth-child(2) {
+  margin-bottom: 60px;
 }
 
 .nav-bloc a {
